@@ -71,3 +71,4 @@ TreatStudioCafe_Project/
 | DELETE | `/api/menu/{id}` | Delete item |
 
 Validation: `name` required, `price` ≥ 0. Invalid requests return 400 with an `error` (and optional `details`) JSON body.
+"# TreatStudioCafe_Project" 
