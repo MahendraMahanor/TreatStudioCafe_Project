@@ -103,7 +103,7 @@ body {
     font-size: 0.85rem;
     white-space: nowrap;
 }
-.nav-book:hover { background: var(--color-primary-dark); color: var(--color-white) !important; }
+.nav-book:hover { background: var(--color-brown-dark); color: var(--color-white) !important; }
 .nav-toggle {
     display: none;
     flex-direction: column;

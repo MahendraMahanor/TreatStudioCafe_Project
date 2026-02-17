@@ -1,6 +1,7 @@
 (function () {
     'use strict';
 
+    // Configurable API base: set data-api-base on <html> or fallback to default
     var apiBase = 'http://localhost:8080';
     var root = document.documentElement;
     if (root && root.getAttribute('data-api-base')) {
@@ -8,6 +9,7 @@
     }
     var MENU_URL = apiBase + '/api/menu';
 
+    // --- Menu (from API) ---
     var menuList = document.getElementById('menu-list');
     var menuLoading = document.getElementById('menu-loading');
     var menuError = document.getElementById('menu-error');
@@ -116,7 +118,7 @@
             })
             .catch(function () {
                 showMenuState(false, true, false);
-                setErrorMsg('Menu loads when the cafe backend is running, or use the site locally with the server.');
+                setErrorMsg('Could not load menu. Make sure the cafe server is running on port 8080.');
             });
     }
 
@@ -132,6 +134,7 @@
         });
     }
 
+    // --- Mobile nav ---
     var navToggle = document.querySelector('.nav-toggle');
     var mainNav = document.querySelector('.main-nav');
     if (navToggle && mainNav) {
@@ -145,6 +148,7 @@
         });
     }
 
+    // --- Smooth scroll ---
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
             var id = this.getAttribute('href');
@@ -157,6 +161,7 @@
         });
     });
 
+    // --- Header scroll ---
     var header = document.querySelector('.site-header');
     if (header) {
         window.addEventListener('scroll', function () {
@@ -164,5 +169,6 @@
         });
     }
 
+    // --- Run ---
     loadMenu();
 })();
