@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = {"http://localhost:3000", "http://127.0.0.1:3000", "null"}, allowCredentials = "true")
+@CrossOrigin(origins = {"http://localhost:3000", "http://127.0.0.1:3000", "https://mahendramahanor.github.io", "null"}, allowCredentials = "true")
 @RestController
 @RequestMapping("/api/menu")
 public class MenuController {
